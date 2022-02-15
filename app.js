@@ -2,20 +2,23 @@ let todoinput = document.querySelector(".todo-input");
 let todobutton = document.querySelector(".todo-button");
 let tocontainer = document.querySelector(".to-container");
 let todolist = document.querySelector(".todo-list");
-let div1 = document.querySelector("#div1");
-let inputdiv = document.querySelector(".inputdiv");
-let label1 = document.querySelector(".label1")
+
+
+
 
 
 todobutton.addEventListener("click", addingitem);
+todolist.addEventListener("click", check1);
+todolist.addEventListener("click", delete1)
 
 
 
 function addingitem(event) {
     event.preventDefault();
     let div1 = document.createElement("div");
-    div1.classList.add("inputdiv");
+    div1.classList.add("todo");
     let checkbox = document.createElement("input");
+    checkbox.classList.add("checkbox1")
     checkbox.type = "checkbox";
     checkbox.name = "checkbox1";
     checkbox.id = "div2";
@@ -24,15 +27,41 @@ function addingitem(event) {
     label1.classList.add("label1")
     label1.htmlFor = "div2";
     label1.appendChild(document.createTextNode(`${todoinput.value}`));
+    let deletebutton = document.createElement("button");
+    deletebutton.innerHTML = "x"
+    deletebutton.classList.add("deletebutton")
 
     div1.appendChild(checkbox);
     div1.appendChild(label1);
+    div1.appendChild(deletebutton);
 
     todolist.appendChild(div1)
 
     todoinput.value = ""
 }
 
+function check1(event) {
+    const item = event.target;
+    const todo = item.parentElement;
 
 
+    if(item.checked) {
+        todo.classList.add("checked")
+    } else {
+        todo.classList.remove("checked")
+    }
+}
+
+function delete1(event) {
+    const item1 = event.target;
+    
+    if(item1.classList[0] == "deletebutton") {
+        const todo1 = item1.parentElement;
+        todo1.remove();
+    }
+
+    
+}
+        
+        
 
