@@ -97,11 +97,14 @@ form button:hover {
     font-size: larger;
     font-weight:900;
     border: none;
-    background-color: white;
+    background-color:inherit;
     opacity: 0.8;
-    transition: all 0.3s ease;
+    
     margin-right: 1rem;
     visibility: hidden;
+    border-radius: 100%;
+    
+    
 }
 
 .todo:hover > .deletebutton {

@@ -28,7 +28,7 @@ function addingitem(event) {
     label1.htmlFor = "div2";
     label1.appendChild(document.createTextNode(`${todoinput.value}`));
     let deletebutton = document.createElement("button");
-    deletebutton.innerHTML = "x"
+    deletebutton.innerHTML = "<i class='fa-solid fa-xmark'></i>"
     deletebutton.classList.add("deletebutton")
 
     div1.appendChild(checkbox);
