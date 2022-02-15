@@ -28,7 +28,7 @@ function addingitem(event) {
     label1.htmlFor = "div2";
     label1.appendChild(document.createTextNode(`${todoinput.value}`));
     let deletebutton = document.createElement("button");
-    deletebutton.innerHTML = "<i class='fa-solid fa-xmark'></i>"
+    deletebutton.innerHTML = "<i class='fa-solid fa-xmark'></i>";
     deletebutton.classList.add("deletebutton")
 
     div1.appendChild(checkbox);
@@ -55,9 +55,10 @@ function check1(event) {
 function delete1(event) {
     const item1 = event.target;
     
-    if(item1.classList[0] == "deletebutton") {
+    if(item1.classList[0] == "fa-solid") {
         const todo1 = item1.parentElement;
-        todo1.remove();
+        const todo2 = todo1.parentElement;
+        todo2.remove();
     }
 
     
