@@ -138,7 +138,14 @@ form button:hover {
     border: 5px solid white;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    transition: all 0.5s ease-in;
 
+}
+
+.footer1:hover {
+    background-color: white;
+    color: #ff6f47;
+    
 }
 
 
